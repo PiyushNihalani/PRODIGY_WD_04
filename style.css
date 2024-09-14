@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(to bottom, rgba(0, 255, 195, 0.5), rgba(174, 255, 0, 0.5));
+    background-size: cover;
+    background-position: center;
+    height: 265vh;
+    margin: 0;
+}
+
+.background-image {
+    /* Add styles to position the image as a background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Ensure the image is behind other elements */
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: 'Baloo Paaji', cursive ;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: padding 0.3s ease-in-out;
+}
+
+
+.navbar .logo {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: #555;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.footer-container{
+    background-color: #555;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.container1, .container2, .container3 {
+    display: inline-block;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.wrapper-contact{
+    display: flex;
+    position: relative;
+    background-color: #333;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footer-text{
+    display: flex;
+    position: relative;
+    background-color: #333;
+    text-align: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+.icon i {
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.icon i:first-child {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.icon i:last-child {
+    opacity: 0;
+    transform: rotate(-90deg); /* Start with a hidden rotation */
+}
+
+#menuToggle {
+    display: none; /* Hide the checkbox */
+}
+
+/* Icon transition on checkbox check */
+#menuToggle:checked + .icon i:first-child {
+    opacity: 0;
+    transform: rotate(90deg); /* Rotate out */
+}
+
+#menuToggle:checked + .icon i:last-child {
+    opacity: 1;
+    transform: rotate(0deg); /* Rotate in */
+}
+
+.navbar .icon {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.nav-links li {
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links li:hover {
+    background-color: #444;
+    border-radius: 10px;
+}
+
+#menuToggle:checked ~ .nav-links {
+    display: flex;
+}
+
+h1{
+    justify-content: center;
+    display: block;
+    text-align: center;
+}
+
+.up{
+    font-size: 90px;
+    font-family: 'Baloo Paaji', cursive;
+    color: #444;
+    padding-top: 150px;
+    display: block;
+}
+
+.down{
+    font-size: 100px;
+    font-family: 'Baloo Paaji', cursive;
+    color: #252525;
+    display: block;
+    margin-top: 25px;
+}
+
+.unique{
+    justify-content: center;
+    display: block;
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #252525;
+    letter-spacing: 5px;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 45%;
+    margin: 0 auto; /* Center the button horizontally */
+    height: 40px;
+    background-color: #7b2bea;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+.button:hover{
+    background-color: #ffffff;
+    color: #7b2bea;
+    border: 2px solid #7b2bea;
+    font-weight: bolder;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.image{
+    margin: 20px auto;
+    padding-top: 400px;
+}
+
+.section-subtitle{
+    font-size:14px;
+}
+
+.img-text {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+.about-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.skill-img1{
+    
+    float: right; /* Add this line */
+    margin-left: 10px;
+}
+
+.skill-image{
+    height: 50%;
+    width: 30%;
+    margin-right: 10px;
+    border: 20px;
+}
+
+.skill-img-text{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-img-text2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill1, .skill2, .skill3 {
+    text-align: left; /* Add this line to align the text to the left */
+    margin: 10px;
+}
+
+.skill-subtitle{
+    font-size: 40px;
+    font-family: 'Baloo Paaji', cursive;
+    color: #7b2bea;
+}
+
+.skill-info{
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #252525;
+}
+
+.subtitle{
+    font-size: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    padding: 120px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-left: 50%;
+    font-family: 'Baloo Paaji', cursive;
+}
+
+.section{
+    font-family: 'Baloo Paaji', cursive;
+    font-size: 50px;
+    color: #3500f5;
+    font-weight: bold;
+}
+
+.info{
+    margin: 20px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: block;
+    font-family: "arial";
+    font-size: 24px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Add some spacing between table rows */
+    display: table; /* Use a table layout */
+    width: 100%;
+}
+
+table img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+th, td {
+    border-radius: 5px; /* Add some border radius for a rounded look */
+    padding: 15px; /* Add some padding to each cell */
+    text-align: center;
+}
+
+td:hover img {
+    opacity: 0.5; /* adjust the opacity to your liking */
+}
+
+.Project-img-text {
+    display: none; /* Add this line to hide the text initially */
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* Add this to center the text horizontally */
+    margin: 0 auto; /* Add this to center the text horizontally */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+td:hover .Project-img-text {
+    display: block; /* Change from display: inline-block to display: block */
+    position: relative; /* Change from position: relative to position: absolute */
+    top: 50%; /* Add this to position the text vertically */
+    left: 50%; /* Add this to position the text horizontally */
+    transform: translate(-50%, -350%); /* Add this to center the text */
+    z-index: 1; /* Add this to bring the text to the front */
+    color: #6600ff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.typed {
+    text-align: center; /* Add this to center the text horizontally */
+    margin: 0 auto; /* Add this to center the text horizontally */
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 3s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes typing {
+    from {
+    width: 0;
+      text-align: center; /* Add this to center the text horizontally */
+    }
+    to {
+    width: 100%;
+      text-align: center; /* Add this to center the text horizontally */
+    }
+}
+
